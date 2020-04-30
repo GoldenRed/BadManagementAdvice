@@ -10,7 +10,10 @@ import AddIcon from '@material-ui/icons/Add';
 
 const useStyles = makeStyles({
   root: {
-    width: '100%',
+    position: 'fixed',
+    width: '50%',
+    bottom: '0',
+    padding: '0% 25%',
   },
 });
 

@@ -2,7 +2,7 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import BottomBar from './Bottom.js';
 import HeaderBar from './Header.js';
-
+import MainArea from './MainArea.js'
 
 function App() {
   return (
@@ -13,7 +13,7 @@ function App() {
       </Grid>
 
       <Grid container>
-      
+        <MainArea />
       </Grid>
 
 
