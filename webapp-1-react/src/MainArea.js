@@ -1,6 +1,6 @@
 import React from 'react';
 import { Paper, Grid } from '@material-ui/core';
-import { fade, makeStyles } from '@material-ui/core/styles';
+import { makeStyles } from '@material-ui/core/styles';
 import Advice from './Advice.js';
 
 const useStyles = makeStyles({
@@ -15,7 +15,6 @@ export default function MainArea() {
   const classes = useStyles();
   return(
     <Paper 
-
     elevation={6} 
     className={classes.root}
     >

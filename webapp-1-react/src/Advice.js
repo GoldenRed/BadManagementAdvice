@@ -5,28 +5,29 @@ import Typography from '@material-ui/core/Typography';
 export default function Advice() {
 
 
-  const number = 1;
-  const user = "Yared";
-  const date = "2020-04-30";
-  const advice = "Suggest that the only reason you didn't advance as far ahead as your own manage rwas becase of some made up feel good reason like maintaining worklife balance.";
+  const adviceNumber = 1;
+  const adviceUser = "Yared";
+  const adviceDate = "2020-04-30";
+  const adviceBody = "Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here.";
+  const advicePoints = 10;
   return(
   <div>
 
     <Typography variant="h6" gutterBottom>
-      Advice Number: {number}
+      Advice Number: {adviceNumber}
     </Typography>
     
     <Typography variant="h4" gutterBottom>
-      {advice}
+      {adviceBody}
     </Typography>
 
     <Typography variant="caption" gutterBottom>
-      Submitted by: {user}
-    </Typography>
-    <Typography variant="caption" display="block" gutterBottom>
-      Date: {date}
+      Submitted by {adviceUser} on {adviceDate}
     </Typography>
 
+    <Typography variant="caption" display="block" gutterBottom>
+      Points: {advicePoints}
+    </Typography>
   </div>
   );
 
