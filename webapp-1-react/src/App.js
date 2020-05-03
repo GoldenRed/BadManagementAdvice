@@ -2,9 +2,19 @@ import React from 'react';
 import { Grid } from '@material-ui/core';
 import BottomBar from './Bottom.js';
 import HeaderBar from './Header.js';
-import MainArea from './MainArea.js'
+import Advice from './Advice.js';
 
 function App() {
+
+  const AdviceInfo = {
+    adviceNumber:1,
+    adviceUser:"Yared",
+    adviceDate:"2020-04-30",
+    adviceBody:"Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here.",
+    advicePoints: 10,
+  }
+
+
   return (
 
     <Grid justify="center" container>
@@ -13,7 +23,7 @@ function App() {
       </Grid>
 
       <Grid container>
-        <MainArea />
+        <Advice adviceDetails={AdviceInfo} />
       </Grid>
 
 
