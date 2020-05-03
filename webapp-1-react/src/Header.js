@@ -1,8 +1,10 @@
 import React from 'react';
 import { AppBar, Toolbar, IconButton, Typography, InputBase } from '@material-ui/core'
 import { fade, makeStyles } from '@material-ui/core/styles';
-import MenuIcon from '@material-ui/icons/Menu';
 import SearchIcon from '@material-ui/icons/Search';
+import MenuComponent from './MenuComponent.js';
+
+
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -79,10 +81,10 @@ export default function HeaderBar() {
           <IconButton
             edge="start"
             className={classes.menuButton}
-            color="inherit"
+            color="black"
             aria-label="open drawer"
           >
-            <MenuIcon />
+            <MenuComponent />
           </IconButton>
           <Typography className={classes.title} variant="h6" noWrap>
             Bad Management Advice
