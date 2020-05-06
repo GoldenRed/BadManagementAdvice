@@ -94,7 +94,7 @@ export default function HeaderBar() {
               <SearchIcon />
             </div>
             <InputBase
-              placeholder="Search for specific bad advice!"
+              placeholder="Looking for a guru?"
               classes={{
                 root: classes.inputRoot,
                 input: classes.inputInput,
