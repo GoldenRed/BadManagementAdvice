@@ -35,10 +35,10 @@ There are two data entities: "Advice" and "User" and they have the following att
 
 In the end, because I wanted the search function to very simply be a search of a user, I went with the following pattern/schema:
 
-Entity | HASH KEY | SORT KEY | Attributes
---- | --- | --- | --- | ---
-User | USER#<USERNAME> | #METADATA#<USERNAME> | Password
-Advice | USER#<USERNAME> | ADVICE#<USERNAME>#<TIMESTAMP> |  Body, Points
+| Entity | HASH KEY | SORT KEY | Attributes |
+| --- | --- | --- | --- | 
+| User | USER#<USERNAME> | #METADATA#<USERNAME> | Password |
+| Advice | USER#<USERNAME> | ADVICE#<USERNAME>#<TIMESTAMP> |  Body, Points |
 
 Inspired by [this AWS post](https://aws.amazon.com/getting-started/hands-on/design-a-database-for-a-mobile-app-with-dynamodb/4/).
 
