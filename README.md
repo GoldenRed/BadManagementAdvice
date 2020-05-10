@@ -12,7 +12,7 @@ I made this web app for educational purposes, to experiment with serverless full
 - [x] - Setup the backend
 - [x] - Allow for random advice browsing.
 - [x] - Add "About Project" and "About Creator".
-- [ ] - Implement "Like" and "Dislike" APIs in the backend.
+- [ ] - Implement "Like" and "Dislike" APIs in the backend, for incrementing the points.
 - [ ] - Implement "Lemme Contribute", to allow for the addition of new advices by new users. Requires a modal popup.
 - [ ] - Implement search - search queries for a specific user should return their advice.
 - [ ] - Implement error handling...............
