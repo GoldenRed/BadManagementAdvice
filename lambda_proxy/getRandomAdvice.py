@@ -40,7 +40,7 @@ def lambda_handler(event, context):
         'statusCode': 200,
         'body': json.dumps(output),
         'headers': {
-            "Access-Control-Allow-Origin": "http://localhost:3000",
+            "Access-Control-Allow-Origin": "http://badmanagementadvice.s3-website.eu-north-1.amazonaws.com/",
             "Access-Control-Allow-Headers": "Content-Type",
             "Access-Control-Allow-Methods": "GET"
         },
