@@ -1,23 +1,49 @@
-import React from 'react';
-import { Grid } from '@material-ui/core';
+import React, { useState } from 'react';
+import { Grid, Paper, Typography } from '@material-ui/core';
 import BottomBar from './Bottom.js';
 import HeaderBar from './Header.js';
 import Advice from './Advice.js';
+import getRandomAdvice from './fetchAdvice.js';
+
+
 
 function App() {
 
-  const AdviceInfo = {
-    adviceNumber:1,
-    adviceUser:"Yared",
-    adviceDate:"2020-04-30",
-    adviceBody:"Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here. Insert bad advice here.",
-    advicePoints: 10,
+  const [AdviceInfo, setAdviceInfo] = useState({init:true}); //start with init == True to deal with initial loading issues
+
+  console.log(AdviceInfo)
+  if(AdviceInfo.init)
+  {
+    return(
+      <Grid justify="center" container>
+      <Grid item xs={12}>
+        <HeaderBar />
+      </Grid>
+
+      <Grid justify="center" container>
+        <Typography variant="h1" gutterBottom>
+          Remember!
+        </Typography>
+        <Typography variant="h1" gutterBottom>
+          Please use this advice responsibly.
+        </Typography>
+        <Typography variant="h1" gutterBottom>
+          Press Gimme More to begin.
+        </Typography>
+      </Grid>
+
+
+        <Grid item xs={12}>
+          <BottomBar setAdviceInfo={setAdviceInfo} />
+        </Grid>
+    </Grid>
+    )
   }
+  else{
 
-
-  return (
-
-    <Grid justify="center" container>
+    return (
+      
+      <Grid justify="center" container>
       <Grid item xs={12}>
         <HeaderBar />
       </Grid>
@@ -28,12 +54,11 @@ function App() {
 
 
         <Grid item xs={12}>
-          <BottomBar />
+          <BottomBar setAdviceInfo={setAdviceInfo} />
         </Grid>
     </Grid>
-
-
-  );
+    );
+  };
 }
 
 export default App;

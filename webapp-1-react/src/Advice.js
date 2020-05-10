@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Grid } from '@material-ui/core';
+import { Paper } from '@material-ui/core';
 import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 
@@ -11,11 +11,20 @@ const useStyles = makeStyles({
   },
 });
 
+const getPrettyDate = (uglyDate) => {
+  var d = new Date(0);
+  d.setUTCSeconds(uglyDate/1000);
+  return d.toString();
+}
+
 export default function Advice({adviceDetails}) {
   const classes = useStyles();
 
-  const { adviceNumber, adviceBody, adviceUser, adviceDate, advicePoints } = adviceDetails;
+  const { adviceBody, adviceUser, adviceDate, advicePoints } = adviceDetails;
   
+  
+  const adviceDatePretty = getPrettyDate(adviceDate);
+
   return(
     <Paper 
     elevation={6} 
@@ -23,7 +32,7 @@ export default function Advice({adviceDetails}) {
     >
 
       <Typography variant="h6" gutterBottom>
-        Advice ID: {adviceNumber}
+        Advice
       </Typography>
       
       <Typography variant="h4" gutterBottom>
@@ -31,7 +40,7 @@ export default function Advice({adviceDetails}) {
       </Typography>
 
       <Typography variant="caption" gutterBottom>
-        Submitted by {adviceUser} on {adviceDate}
+        Submitted by {adviceUser} on {adviceDatePretty}
       </Typography>
 
       <Typography variant="caption" display="block" gutterBottom>

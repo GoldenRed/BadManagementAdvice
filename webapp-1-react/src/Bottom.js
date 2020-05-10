@@ -7,6 +7,7 @@ import ArrowForwardIosIcon from '@material-ui/icons/ArrowForwardIos';
 import FavoriteIcon from '@material-ui/icons/Favorite';
 import ThumbDownIcon from '@material-ui/icons/ThumbDown';
 import AddIcon from '@material-ui/icons/Add';
+import getRandomAdvice from './fetchAdvice.js';
 
 const useStyles = makeStyles({
   root: {
@@ -17,9 +18,17 @@ const useStyles = makeStyles({
   },
 });
 
-export default function BottomBar() {
+
+export default function BottomBar({setAdviceInfo}) {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
+
+  
+  function gimmeMoreFunc() {
+    getRandomAdvice().then((data) => {
+      setAdviceInfo(data);
+    });
+  }
 
   return (
     <Paper>
@@ -31,7 +40,7 @@ export default function BottomBar() {
         showLabels
         className={classes.root}
       >
-        <BottomNavigationAction label="Gimme More!" icon={<ArrowForwardIosIcon />} />
+        <BottomNavigationAction onClick={gimmeMoreFunc} label="Gimme More!" icon={<ArrowForwardIosIcon />} />
         <BottomNavigationAction label="I Like!" icon={<FavoriteIcon />} />
         <BottomNavigationAction label="Meh" icon={<ThumbDownIcon />} />
         <BottomNavigationAction label="Lemme Contribute!" icon={<AddIcon />} />
