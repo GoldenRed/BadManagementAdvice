@@ -2,9 +2,20 @@
 
 A web app that unscrupulously doles out BAD advice for people in managerial and general leadership positions. It is completely serverless.
 
-I made this web app to experiment with serverless fullstack development. 
+I made this web app for educational purposes, to experiment with serverless fullstack development. 
 
 [http://badmanagementadvice.s3-website.eu-north-1.amazonaws.com/](http://badmanagementadvice.s3-website.eu-north-1.amazonaws.com/)
+
+## TODO
+
+[x] - Setup base components
+[x] - Setup the backend
+[x] - Allow for random advice browsing.
+[x] - Add "About Project" and "About Creator".
+[ ] - Implement "Like" and "Dislike" APIs in the backend.
+[ ] - Implement "Lemme Contribute", to allow for the addition of new advices by new users. Requires a modal popup.
+[ ] - Implement search - search queries for a specific user should return their advice.
+[ ] - Implement error handling...............
 
 ## Frontend
 
