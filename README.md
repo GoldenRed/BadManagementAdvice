@@ -5,6 +5,7 @@ A web app that unscrupulously doles out BAD advice for people in managerial and 
 I made this web app for educational purposes, to experiment with serverless fullstack development. 
 
 [http://badmanagementadvice.s3-website.eu-north-1.amazonaws.com/](http://badmanagementadvice.s3-website.eu-north-1.amazonaws.com/)
+[http://bad.yared.se](http://bad.yared.se)
 
 ## TODO
 
